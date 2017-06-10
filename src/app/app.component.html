@@ -1,18 +1,17 @@
 <md-sidenav-container>
   <md-sidenav #sidenav mode="side" opened="true">
-    <md-list>
-      <md-list-item><a md-button>Click me!</a></md-list-item>
-    </md-list>
+    <md-nav-list>
+      <a md-list-item routerLink="/mood-board" routerLinkActive="active">Mood board</a>
+      <a md-list-item routerLink="/game-frame" routerLinkActive="active">Game frame</a>
+      <a md-list-item routerLink="/clock" routerLinkActive="active">Clock</a>
+      <a md-list-item routerLink="/settings" routerLinkActive="active">Settings</a>
+    </md-nav-list>
   </md-sidenav>
   <div class="main-content">
-    Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce
-    vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id,
-    neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna.
-    Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat
-    cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui
-    sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu
-    erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh
-    ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien
-    consectetuer.
+    <md-toolbar color="primary">
+      <button md-icon-button (click)="sidenav.toggle()"><md-icon>menu</md-icon></button>
+      <span>{{title}}</span>
+    </md-toolbar>
+    <router-outlet></router-outlet>
   </div>
 </md-sidenav-container>
