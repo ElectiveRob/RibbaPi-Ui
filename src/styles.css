@@ -4,3 +4,11 @@ html, body, material-app, md-sidenav-container, .main-content {
   width: 100%;
   height: 100%;
 }
+
+button.icon.danger{
+  color: red;
+}
+
+snack-bar-container.danger {
+  background-color:red;
+}

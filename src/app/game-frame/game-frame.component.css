@@ -1,0 +1,11 @@
+md-card.gameframe-card
+{
+    width: 200px;
+    margin: 16px;
+    float: left;
+}
+md-card.gameframe-card img{
+    height: 200px;
+    background-size: cover;
+    image-rendering: pixelated;
+}

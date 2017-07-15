@@ -1,3 +1,16 @@
-<p>
-  settings works!
-</p>
+<md-card>
+  <md-card-title>Basic settings</md-card-title>
+  <md-card-content>
+    <div>
+      <md-select placeholder="Mode" [(ngModel)]="modus" (change)="onModelChange()">
+        <md-option [value]="1">Mood board</md-option>
+        <md-option [value]="2">Game frame</md-option>
+        <md-option [value]="4">Clock</md-option>
+      </md-select>
+    </div>
+    <h2>Brightness</h2>
+    <div>
+      <md-slider min="0" step="0.01" max="1" [(ngModel)]="brightness" (change)="onBrightnessChange()" ></md-slider>
+    </div>
+  </md-card-content>
+</md-card>

@@ -1,0 +1,11 @@
+<h2 md-dialog-title>Upload game frame</h2>
+<md-dialog-content>
+  <form>
+    <p>Select a file to upload</p>
+    <input #inputFile type="file" (change)="onSelectFile($event)">
+    <p *ngIf="inputFile.value">Selected <strong>{{inputFile.value}}</strong></p> 
+  </form>
+</md-dialog-content>
+<md-dialog-actions>
+  <button md-raised-button color="primary" [disabled]="!inputFile?.value" (click)="upload(inputFile)">Upload</button>
+</md-dialog-actions>

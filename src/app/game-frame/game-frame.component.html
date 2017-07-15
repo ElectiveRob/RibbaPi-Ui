@@ -1,3 +1,12 @@
-<p>
-  game-frame works!
-</p>
+<md-toolbar>
+    <button class="icon" (click)="openUpload()" md-icon-button><md-icon>file_upload</md-icon></button>
+</md-toolbar>
+<md-card class="gameframe-card" *ngFor='let gameframe of gameframes'>
+    <md-card-header>
+        <md-card-title>{{gameframe}}</md-card-title>
+    </md-card-header>
+    <img md-card-image [src]="host + 'gameframe/' + gameframe" />
+    <md-card-actions>
+        <button class="icon danger" md-icon-button (click)="deleteFrame(gameframe)"><md-icon>delete</md-icon></button>
+    </md-card-actions>
+</md-card>

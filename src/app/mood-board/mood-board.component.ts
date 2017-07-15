@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BoardSettingsService } from "app/board-settings.service";
 
 @Component({
   selector: 'app-mood-board',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoodBoardComponent implements OnInit {
 
-  constructor() { }
+  public modus:number;
+
+  constructor(private settings: BoardSettingsService) { }
 
   ngOnInit() {
+  }
+
+  onModeChange()
+  {
+    this.settings.setMoodBoardMode(this.modus);
   }
 
 }

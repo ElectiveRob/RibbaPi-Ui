@@ -1,0 +1,8 @@
+<h2 md-dialog-title>{{data.title}}</h2>
+<md-dialog-content>
+  {{data.message}}
+</md-dialog-content>
+<md-dialog-actions>
+  <button md-raised-button color="warn" (click)="dialogRef.close(true)">Delete</button> 
+  <button md-raised-button (click)="dialogRef.close()">Cancel</button>
+</md-dialog-actions>

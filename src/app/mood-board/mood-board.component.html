@@ -1,3 +1,12 @@
-<p>
-  mood-board works!
-</p>
+<md-card>
+  <md-card-title>Moodboard settings</md-card-title>
+  <md-card-content>
+    <div>
+      <md-select placeholder="Mode" [(ngModel)]="modus" (change)="onModeChange()">
+        <md-option [value]="1">Color wheel</md-option>
+        <md-option [value]="2">Cycle colors</md-option>
+        <md-option [value]="3">Wish down and up</md-option>
+      </md-select>
+    </div>
+  </md-card-content>
+</md-card>
