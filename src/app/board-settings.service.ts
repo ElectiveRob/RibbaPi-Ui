@@ -35,4 +35,17 @@ export class BoardSettingsService {
       });
   }
 
+  public setFrame(frame:string): void{
+    this.http.post("gameframe/current", frame).subscribe(result=>{
+      this.snackBar.open("Frame "+ frame +" is set.", undefined, { duration:5000 })
+    })
+  }
+
+  public nextFrame()
+  {
+    this.http.post("gameframe/next", null).subscribe(result=>{
+      this.snackBar.open("Next frame is set.", undefined, { duration:5000 })
+    })
+  }
+
 }

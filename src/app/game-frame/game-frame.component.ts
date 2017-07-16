@@ -50,6 +50,16 @@ export class GameFrameComponent implements OnInit {
       });
   }
 
+  setFrame(frame:string)
+  {
+    this.service.setFrame(frame);
+  }
+
+  nextFrame()
+  {
+    this.service.nextFrame();
+  }
+
   openUpload()
   {
     let dialogRef = this.dialog.open(UploadFrameComponent);
