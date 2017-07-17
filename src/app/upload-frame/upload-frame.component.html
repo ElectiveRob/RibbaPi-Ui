@@ -7,5 +7,5 @@
   </form>
 </md-dialog-content>
 <md-dialog-actions>
-  <button md-raised-button color="primary" [disabled]="!inputFile?.value" (click)="upload(inputFile)">Upload</button>
+  <button md-raised-button (click)="dialogRef.close()">Close</button>
 </md-dialog-actions>

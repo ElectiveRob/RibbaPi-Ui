@@ -15,7 +15,7 @@ export class UploadFrameComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
   onSelectFile(event){
     let fileList: FileList = event.target.files;
     if(fileList.length > 0) {
