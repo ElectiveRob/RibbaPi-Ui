@@ -1,0 +1,11 @@
+<h2 md-dialog-title>Send Message</h2>
+<md-dialog-content>
+  <md-input-container>
+    <input mdInput [(ngModel)]="message" #msg maxlength="100" placeholder="Message">
+    <md-hint align="end">{{msg.value.length}} / 100</md-hint>
+  </md-input-container>
+</md-dialog-content>
+<md-dialog-actions>
+  <button md-button md-dialog-close>Cancel</button> 
+  <button md-button (click)="sendMessage()">Send</button>
+</md-dialog-actions>

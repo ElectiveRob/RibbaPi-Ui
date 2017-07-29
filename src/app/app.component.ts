@@ -3,6 +3,8 @@ import 'rxjs/add/operator/mergeMap';
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
 import { Title } from "@angular/platform-browser";
+import { MdDialog } from "@angular/material";
+import { MessageDialogComponent } from "app/message-dialog/message-dialog.component";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,8 @@ export class AppComponent {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private titleService: Title
+    private titleService: Title,
+    private dialog: MdDialog
   ) {}
 
   ngOnInit() {
@@ -32,5 +35,10 @@ export class AppComponent {
         this.title = event['title'];
         this.titleService.setTitle(event['title'])
       });
+  }
+
+  openSendText()
+  {
+    this.dialog.open(MessageDialogComponent);
   }
 }

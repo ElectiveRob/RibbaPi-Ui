@@ -5,6 +5,8 @@ html, body, material-app, md-sidenav-container, .main-content {
   height: 100%;
 }
 
+body { font-family: Roboto, Arial, sans-serif; }
+
 button.icon.danger{
   color: red;
 }

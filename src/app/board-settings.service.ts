@@ -48,4 +48,11 @@ export class BoardSettingsService {
     })
   }
 
+  public sendMessage(message:string)
+  {
+    this.http.post("text", message).subscribe(result=>{
+      this.snackBar.open("Message is send.", undefined, { duration:5000 })
+    })
+  }
+
 }

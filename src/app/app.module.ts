@@ -17,6 +17,7 @@ import { BoardSettingsService } from "app/board-settings.service";
 import { AppConfig } from "app/app.config";
 import { UploadFrameComponent } from './upload-frame/upload-frame.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { MessageDialogComponent } from './message-dialog/message-dialog.component';
 
 const appRoutes: Routes =[
   { path: 'mood-board', component: MoodBoardComponent, data: {title: 'Mood board'} },
@@ -35,7 +36,8 @@ const appRoutes: Routes =[
     ClockComponent,
     SettingsComponent,
     UploadFrameComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    MessageDialogComponent
   ],
   imports: [
     HttpModule,
@@ -62,7 +64,7 @@ const appRoutes: Routes =[
     { provide: APP_INITIALIZER, useFactory: loadContext, deps: [AppConfig], multi: true }
   ],
   bootstrap: [AppComponent],
-  entryComponents: [UploadFrameComponent, ConfirmDialogComponent]
+  entryComponents: [UploadFrameComponent, ConfirmDialogComponent, MessageDialogComponent]
 })
 export class AppModule { }
 
